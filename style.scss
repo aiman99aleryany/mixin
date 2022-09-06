@@ -7,6 +7,78 @@
 
 // **Suggestion:**
 
-@mixin article-card($color) {
-  color: $color;
+// @mixin article-card($color) {
+//   color: $color;
+// }
+
+$color-primary: red;
+$color-secondary: blue;
+$color-tertiary: green;
+$default-font: 1rem;
+$footer-defualt-font: 24px;
+$regular-padding: 1rem;
+
+@mixin article-props($index, $color, $border_color, $font_size: 1rem) {
+  article:nth-child(#{$index}) {
+    width: 100%;
+    padding: $regular-padding;
+    border: 2px solid $border_color;
+    text-align: center;
+    color: $color;
+    font-size: $font_size;
+  }
+}
+
+body {
+  div:first-child {
+    padding: $regular-padding;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid $color-primary;
+    gap: 1rem;
+    h1:first-child {
+      color: $color-tertiary;
+      text-decoration: 2px underline $color-secondary;
+    }
+
+    section:nth-of-type(1) {
+      display: flex;
+      @include article-props(
+        $index: 1,
+        $color: $color-primary,
+        $border_color: $color-tertiary
+      );
+
+      @include article-props(
+        $index: 2,
+        $color: $color-secondary,
+        $border_color: $color-tertiary
+      );
+
+      @include article-props(
+        $index: 3,
+        $color: $color-primary,
+        $border_color: $color-tertiary
+      );
+
+      @include article-props(
+        $index: 4,
+        $color: $color-secondary,
+        $border_color: $color-tertiary
+      );
+    }
+
+    section:nth-of-type(2) {
+      width: 100%;
+      display: flex;
+      @include article-props(
+        $index: 1,
+        $color: $color-tertiary,
+        $border_color: $color-secondary,
+        $font_size: $footer-defualt-font
+      );
+    }
+  }
 }

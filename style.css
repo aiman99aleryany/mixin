@@ -1,17 +1,62 @@
-/* Error: Expected expression.
- *    ,
- * 19 |       @for $index from ;
- *    |                        ^
- *    '
- *   style.scss 19:24  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Expected expression.\a    \2577 \a 19 \2502        @for $index from ;\d\a    \2502                         ^\a    \2575 \a   style.scss 19:24  root stylesheet";
+body div:first-child {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid red;
+  gap: 1rem;
 }
+body div:first-child h1:first-child {
+  color: green;
+  text-decoration: 2px underline blue;
+}
+body div:first-child section:nth-of-type(1) {
+  display: flex;
+}
+body div:first-child section:nth-of-type(1) article:nth-child(1) {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid green;
+  text-align: center;
+  color: red;
+  font-size: 1rem;
+}
+body div:first-child section:nth-of-type(1) article:nth-child(2) {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid green;
+  text-align: center;
+  color: blue;
+  font-size: 1rem;
+}
+body div:first-child section:nth-of-type(1) article:nth-child(3) {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid green;
+  text-align: center;
+  color: red;
+  font-size: 1rem;
+}
+body div:first-child section:nth-of-type(1) article:nth-child(4) {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid green;
+  text-align: center;
+  color: blue;
+  font-size: 1rem;
+}
+body div:first-child section:nth-of-type(2) {
+  width: 100%;
+  display: flex;
+}
+body div:first-child section:nth-of-type(2) article:nth-child(1) {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid blue;
+  text-align: center;
+  color: green;
+  font-size: 24px;
+}
+
+/*# sourceMappingURL=style.css.map */
