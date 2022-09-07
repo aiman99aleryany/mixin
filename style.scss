@@ -15,7 +15,7 @@ $color-primary: red;
 $color-secondary: blue;
 $color-tertiary: green;
 $default-font: 1rem;
-$footer-defualt-font: 24px;
+$footer-default-font: 24px;
 $regular-padding: 1rem;
 
 @mixin article-props($index, $color, $border_color, $font_size: 1rem) {
@@ -77,7 +77,7 @@ body {
         $index: 1,
         $color: $color-tertiary,
         $border_color: $color-secondary,
-        $font_size: $footer-defualt-font
+        $font_size: $footer-default-font
       );
     }
   }
