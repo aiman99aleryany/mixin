@@ -19,7 +19,7 @@ $footer-default-font: 24px;
 $regular-padding: 1rem;
 
 @mixin article-props($index, $color, $border_color, $font_size: 1rem) {
-  article:nth-child(#{$index}) {
+  article:nth-child($index) {
     width: 100%;
     padding: $regular-padding;
     border: 2px solid $border_color;
